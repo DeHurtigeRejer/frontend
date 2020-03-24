@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  border-bottom: solid #000000 1px;
+}
+
+#translations {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+}
+
+.country:nth-child(odd) {
+  background: #C1C1C1;
+}
+
+.country:nth-child(even) {
+  background: #DDDDDD;
+}
+
+h2 {
+  border-bottom: solid #000000 1px;
+  padding: 1vw;
+}
