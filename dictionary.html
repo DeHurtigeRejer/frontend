@@ -10,20 +10,32 @@
 </head>
 
 <body>
+  <div class="modalColor">
+    <div id="dictionaryModal">
+      <div class="addword" onclick="hideModal">
+
+      </div>
+    </div>
+  </div>
+  <div id="dictionaryButton" onclick="showModal()"><img src="./assets/plus.svg" alt="">
+  </div>
   <div id="translations">
     <div class="country">
       <h1>Dansk</h1>
-      <h2>Keramik</h2>
     </div>
     <div class="country">
       <h1>Engelsk</h1>
-      <h2>Ceramic</h2>
     </div>
     <div class="country">
       <h1>Svensk</h1>
-      <h2>Keramik</h2>
     </div>
   </div>
 </body>
+
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+<script type="text/javascript" src="./js/dictionary.js">
+
+</script>
 
 </html>
