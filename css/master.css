@@ -5,11 +5,14 @@
 
 body {
   overflow: hidden;
+  background-color: black;
 }
 
 .img {
   height: 100%;
   transform: translate(-44%, -50%);
+  opacity: 0.5;
+  filter: grayscale(70%);
 }
 
 .grid {
