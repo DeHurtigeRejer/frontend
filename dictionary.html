@@ -5,19 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/css/Dictionary.css">
+  <link rel="stylesheet" href="/css/dictionary.css">
   <title>Dictionary</title>
 </head>
 
 <body>
   <div class="modalColor">
     <div id="dictionaryModal">
-      <div class="addword" onclick="hideModal">
+      <div class="addword">
+        <div class="close"><img src="./assets/plus.svg" alt=""></div>
+        <div id="title">Tilføj Oversættelse</div>
+        <div id="inputs">
 
+        </div>
+        <button id="doneButton" onclick="addToDatabase()">Godkend</button>
       </div>
     </div>
   </div>
-  <div id="dictionaryButton" onclick="showModal()"><img src="./assets/plus.svg" alt="">
+  <div id="dictionaryButton"><img src="./assets/plus.svg" alt="">
   </div>
   <div id="translations">
     <div class="country">
