@@ -18,14 +18,14 @@
       </div>
     </div>
     <div class="Chefmenu">
-      <div class="Statusbox">
+      <div id="BtnStatus" class="Statusbox">
         <h1>Se status på oversættelser</h1>
       </div>
 
       <div class="Tilføjbox">
         <h1>Tilføj Medarbejder</h1>
       </div>
-      <div class="Opgavebox">
+      <div id="BtnOpgave" class="Opgavebox">
         <h1>Lav ny opgave</h1>
       </div>
 
@@ -33,3 +33,29 @@
         <h1>Ændrer i ordbogen</h1>
       </div>
     </div>
+    <div id="Statusmodal" class="Statusside">
+      <div class="Statusside-content">
+        <span class="Statusclose">&times;</span>
+      </div>
+    </div>
+    <div id="Opgavemodal" class="Opgaveside">
+      <div class="Opgaveside-Content">
+        <div class="opgave-header">
+          <span class="Opgaveclose">&times;</span>
+          <h2>Lave ny opgave</h2>
+        </div>
+        <div class="opgave-body">
+          <h3>Titel på opgave</h3>
+          <input type="text" name="Titelopg">
+          <h3>Hvor mange produkter:</h3>
+          <input type="text" name="Antalpro">
+          <h3>Start nummer:</h3>
+          <input type="text" name="Startnum">
+        </div>
+      </div>
+
+    </div>
+    <script src="./js/Chef.js"></script>
+</body>
+
+</html>
