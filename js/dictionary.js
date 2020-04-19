@@ -14,24 +14,86 @@ var db = firebase.firestore();
 
 let countrysHTML = document.querySelectorAll("div[class='country'] > h1");
 let countrys = [];
-for (x = 0; x < countrysHTML.length; x++) {
-	countrys.push(countrysHTML[x].innerText)
-}
-db.collection("Dictionary").get().then((querySnapshot) => {
+
+
+db.collection("Countries").get().then((querySnapshot) => {
 	querySnapshot.forEach((doc) => {
-		countrys.forEach((country, index) => {
-			document.querySelectorAll("div[class='country']")[index].innerHTML += '<h2>' + doc.data()[country] + '</h2>'
-		});
+		for (x in doc.data()) {
+			countrys.push(doc.data()[x])
+		}
 	});
 });
 
 
-function showModal() {
-	document.querySelector("div[id='dictionaryButton']").style.display = "none"
-	document.querySelector("div[class='modalColor']").style.display = "block"
+updateData()
+
+function updateData() {
+	countrys.forEach((country, index) => {
+		document.querySelectorAll("div[class='country']")[index].innerHTML = "";
+		document.querySelectorAll("div[class='country']")[index].innerHTML = "<h1>" + countrys[index] + "</h1>";
+	});
+	db.collection("Dictionary").get().then((querySnapshot) => {
+		querySnapshot.forEach((doc) => {
+			countrys.forEach((country, index) => {
+				document.querySelectorAll("div[class='country']")[index].innerHTML += '<h2>' + doc.data()[country] + '</h2>'
+			});
+		});
+	});
+	document.querySelector('#inputs').innerHTML = ""
+	db.collection("Countries").get().then((querySnapshot) => {
+		querySnapshot.forEach((doc) => {
+			for (x in doc.data()) {
+				document.querySelector('#inputs').innerHTML += "<label>" + doc.data()[x] + " </label><input type='text' name='value' value=''>"
+			}
+		});
+	});
 }
 
-function hideModal() {
-	document.querySelector("div[id='dictionaryButton']").style.display = "block"
-	document.querySelector("div[class='modalColor']").style.display = "none"
+
+// Get DOM Elements
+const modal = document.querySelector('.modalColor');
+const modalBtn = document.querySelector('#dictionaryButton');
+const closeBtn = document.querySelector('.close');
+
+// Events
+modalBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', outsideClick);
+
+
+function openModal() {
+	modal.style.display = 'block';
+	modalBtn.style.display = 'none';
+}
+
+// Close
+function closeModal() {
+	modal.style.display = 'none';
+	modalBtn.style.display = 'block';
+}
+
+async function addToDatabase() {
+	let allValues = document.querySelectorAll("input[name='value']")
+	let newValues = {};
+	await db.collection("Countries").get().then((querySnapshot) => {
+		querySnapshot.forEach((doc) => {
+			for (x in doc.data()) {
+				console.log(allValues[x].value)
+				newValues[doc.data()[x]] = allValues[x].value
+			}
+		});
+	});
+	await db.collection("Dictionary").doc(newValues['Dansk']).set(newValues, {
+		merge: true
+	})
+	updateData()
+	closeModal()
+}
+
+// Close If Outside Click
+function outsideClick(e) {
+	if (e.target == modal) {
+		modal.style.display = 'none';
+		modalBtn.style.display = 'block';
+	}
 }
