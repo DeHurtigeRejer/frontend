@@ -22,20 +22,56 @@
         <h1>Se status på oversættelser</h1>
       </div>
 
-      <div class="Tilføjbox">
+      <div id="BtnTilføj" class="Tilføjbox">
         <h1>Tilføj Medarbejder</h1>
       </div>
       <div id="BtnOpgave" class="Opgavebox">
         <h1>Lav ny opgave</h1>
       </div>
 
-      <div class="Ændringsbox">
+      <div class="Ændringsbox" onclick="window.location.href = 'dictionary.html'">
         <h1>Ændrer i ordbogen</h1>
       </div>
     </div>
     <div id="Statusmodal" class="Statusside">
       <div class="Statusside-content">
-        <span class="Statusclose">&times;</span>
+        <div class="status-header">
+          <span class="Statusclose">&times;</span>
+          <h2>Status</h2>
+        </div>
+        <div class="status-body">
+          <div class="Statusbar">
+            <div class="Opgavenum">
+              <h1>1</h1>
+            </div>
+            <div class="Statusnavn">
+              <h1>Seiko prospex</h1>
+            </div>
+
+            <div class="Statusfarve">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Tilføjmodal" class="Tilføjside">
+      <div class="Tilføjside-content">
+        <div class="Tilføj-header">
+          <span class="Tilføjclose">&times;</span>
+          <h2>Tilføj Medarbejder</h2>
+        </div>
+        <div class="Tilføj-body">
+          <h3>Navn:</h3>
+          <input type="text" class="Username">
+          <h3>Password:</h3>
+          <input type="text" class="Password">
+          <h3>Derpartment</h3>
+          <input type="text" class="Derpartment">
+        </div>
+        <div class="Tilføj-footer">
+          <button type="button" class="BtnTilføjet">Tilføjet</button>
+        </div>
       </div>
     </div>
     <div id="Opgavemodal" class="Opgaveside">
