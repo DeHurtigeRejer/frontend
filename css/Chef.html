@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>De Hurtige Rejer</title>
+</head>
+<link rel="stylesheet" href="/css/Chef.css">
+
+<body>
+  <div class="backgroundcolor">
+    <div class="Header">
+      <div class="imgcontainer">
+        <img src="assets/download.png" alt="Avatar" class="avatar">
+      </div>
+      <div class="Velkommen">
+        <h1>Velkommen Simon</h1>
+      </div>
+    </div>
+    <div class="Chefmenu">
+      <div id="BtnStatus" class="Statusbox">
+        <h1>Se status på oversættelser</h1>
+      </div>
+
+      <div class="Tilføjbox">
+        <h1>Tilføj Medarbejder</h1>
+      </div>
+      <div id="BtnOpgave" class="Opgavebox">
+        <h1>Lav ny opgave</h1>
+      </div>
+
+      <div class="Ændringsbox">
+        <h1>Ændrer i ordbogen</h1>
+      </div>
+    </div>
+    <div id="Statusmodal" class="Statusside">
+      <div class="Statusside-content">
+        <span class="Statusclose">&times;</span>
+      </div>
+    </div>
+    <div id="Opgavemodal" class="Opgaveside">
+      <div class="Opgaveside-Content">
+        <div class="opgave-header">
+          <span class="Opgaveclose">&times;</span>
+          <h2>Lave ny opgave</h2>
+        </div>
+        <div class="opgave-body">
+          <h3>Titel på opgave</h3>
+          <input type="text" name="Titelopg">
+          <h3>Hvor mange produkter:</h3>
+          <input type="text" name="Antalpro">
+          <h3>Start nummer:</h3>
+          <input type="text" name="Startnum">
+        </div>
+        <div class="opgave-footer">
+          <button type="button" class="btnGodkend">Godkend</button>
+        </div>
+      </div>
+
+    </div>
+    <script src="./js/Chef.js"></script>
+</body>
+
+</html>
