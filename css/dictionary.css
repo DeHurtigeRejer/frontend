@@ -3,9 +3,14 @@
   padding: 0;
 }
 
+body {
+  background-color: rgba(8, 105, 114, 1);
+  overflow: hidden;
+}
+
 h1 {
   text-align: center;
-  border-bottom: solid #000000 1px;
+  border-bottom: solid black 1.5px;
 }
 
 #translations {
@@ -15,19 +20,25 @@ h1 {
 }
 
 .country:nth-child(odd) {
-  background: #C1C1C1;
+  background: #17b978;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  border-left: solid black 1.5px;
 }
 
 .country:nth-child(even) {
-  background: #DDDDDD;
+  background: rgba(8, 105, 114, 1);
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  border-left: solid black 1.5px;
 }
 
 h2 {
-  border-bottom: solid #000000 1px;
+  border-bottom: solid black 1.5px;
   padding: 1vw;
 }
 
-#dictionaryButton{
+#dictionaryButton {
   width: 2vw;
   position: absolute;
   bottom: 5%;
@@ -35,10 +46,9 @@ h2 {
   transition: 0.25s ease-out;
 }
 
-#dictionaryButton:hover{
+#dictionaryButton:hover {
   transform: scale(1.05);
 }
-
 
 #dictionaryModal {
   position: absolute;
@@ -54,11 +64,12 @@ h2 {
 .addword {
   position: absolute;
   width: 30vw;
-  background-color: #C1C1C1;
+  background-color: rgba(8, 105, 114, 1);
   top: 50%;
   left: 25%;
   padding: 1vw;
   transform: translate(-50%, -50%);
+  color: white;
 }
 
 .modalColor {
@@ -69,7 +80,7 @@ h2 {
   display: none;
 }
 
-.close{
+.close {
   position: absolute;
   right: 5%;
   top: 5%;
@@ -77,22 +88,26 @@ h2 {
   transform: rotate(45deg);
 }
 
-#title{
+#title {
   text-align: center;
   font-size: 2.5vw;
   font-weight: bold;
   margin-bottom: 1vw;
 }
 
-#inputs{
+#inputs {
   display: grid;
   font-size: 1.5vw;
   grid-template-columns: auto 1fr;
   grid-gap: 1vw;
   padding: 0 1vw;
 }
-#doneButton{
+
+#doneButton {
   width: 20%;
   margin-left: 77%;
   margin-top: 1vw;
+  border-radius: 3vw;
+  color: black;
+  background-color: #17b978;
 }

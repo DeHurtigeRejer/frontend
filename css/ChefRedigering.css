@@ -7,8 +7,19 @@ body {
   background: rgba(8, 105, 114, 1);
 }
 
+.background {
+  overflow: hidden;
+}
+
 .Opgavenum {
   margin-right: 10px;
+}
+
+img.tilbagepil {
+  height: 50px;
+  float: right;
+  margin-right: 5px;
+  margin-top: 5px;
 }
 
 .Redigeringsbox {

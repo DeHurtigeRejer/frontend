@@ -88,7 +88,7 @@ img.avatar {
   text-align: center;
 }
 
-.Opgaveside, .Statusside {
+.Opgaveside, .Statusside, .Tilføjside {
   display: none;
   position: fixed;
   z-index: 1;
@@ -102,7 +102,7 @@ img.avatar {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.Opgaveside-Content, .Statusside-content {
+.Opgaveside-Content, .Statusside-content, .Tilføjside-content {
   position: relative;
   background: rgba(8, 105, 114, 1);
   margin: auto;
@@ -112,20 +112,20 @@ img.avatar {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
 }
 
-.opgave-header {
+.opgave-header, .Tilføj-header, .status-header {
   padding: 2px 16px;
   text-align: center;
   color: white;
 }
 
-.opgave-body {
+.opgave-body, .Tilføj-body, .status-body {
   margin-top: 20px;
   text-align: center;
   padding: 2px 16px;
   color: white;
 }
 
-.opgave-footer {
+.opgave-footer, .Tilføj-footer {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
@@ -133,7 +133,7 @@ img.avatar {
   color: white;
 }
 
-.btnGodkend {
+.btnGodkend, .BtnTilføjet {
   height: 30px;
   width: 100px;
   background-color: #17b978;
@@ -141,15 +141,37 @@ img.avatar {
   border-radius: 3vw;
 }
 
-.Opgaveclose {
+.Statusbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr;
+  background-color: #17b978;
+  color: white;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 3vw;
+  text-align: left;
+}
+
+.Statusfarve {
+  height: 50px;
+  width: 50px;
+  background-color: #bbb;
+  border-radius: 50%;
+}
+
+.Statusnavn {
+  margin-left: 10px;
+}
+
+.Opgaveclose, .Tilføjclose, .Statusclose {
   color: black;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.Opgaveclose:hover,
-.Opgaveclose:focus {
+.Opgaveclose:hover, .Tilføjclose:hover, .Statusclose:hover, .Opgaveclose:focus, .Tilføjclose:focus, .Statusclose:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
