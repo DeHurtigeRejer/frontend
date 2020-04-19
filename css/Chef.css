@@ -104,7 +104,7 @@ img.avatar {
 
 .Opgaveside-Content, .Statusside-content {
   position: relative;
-  background-color: #fefefe;
+  background: rgba(8, 105, 114, 1);
   margin: auto;
   padding: 0;
   border: 1px solid #888;
@@ -114,15 +114,31 @@ img.avatar {
 
 .opgave-header {
   padding: 2px 16px;
-  background-color: white;
   text-align: center;
+  color: white;
 }
 
 .opgave-body {
-  margin-top: 2px;
+  margin-top: 20px;
   text-align: center;
-  background: white;
   padding: 2px 16px;
+  color: white;
+}
+
+.opgave-footer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 2px 16px;
+  color: white;
+}
+
+.btnGodkend {
+  height: 30px;
+  width: 100px;
+  background-color: #17b978;
+  color: white;
+  border-radius: 3vw;
 }
 
 .Opgaveclose {
