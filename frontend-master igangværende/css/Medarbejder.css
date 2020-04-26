@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.backgroundcolor {
+  height: 100vh;
+  background: rgba(8, 105, 114, 1);
+}
+
+.Header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+img.avatar {
+  width: 20vw;
+  border-radius: 50%;
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  margin-top: 10px;
+  margin-left: 5vw;
+  margin-bottom: 10px
+}
+
+.Velkommen {
+  text-align: left;
+  margin-left: 20px;
+  font-size: 45px;
+  color: white;
+}
+
+.infobox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #17b978;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 3vw;
+  justify-content: space-between;
+}
+
+.produktcounter {
+  text-align: right;
+}

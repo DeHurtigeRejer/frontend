@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="dk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/dictionary.css">
+  <title>Dictionary</title>
+</head>
+
+<body>
+  <div class="imgcontainer">
+    <img src="assets/ventre_pil.png" alt="Tilbagepil" class="tilbagepil" onclick="window.location.href = 'Chef.html'">
+  </div>
+  <div class="modalColor">
+    <div id="dictionaryModal">
+      <div class="addword">
+        <div class="close"><img src="./assets/plus.svg" alt=""></div>
+        <div id="title">Tilføj Oversættelse</div>
+        <div id="inputs">
+
+        </div>
+        <button id="doneButton" onclick="addToDatabase()">Godkend</button>
+      </div>
+    </div>
+  </div>
+  <div id="dictionaryButton"><img src="./assets/plus.svg" alt="">
+  </div>
+  <div id="translations">
+    <div class="country">
+      <h1>Dansk</h1>
+    </div>
+    <div class="country">
+      <h1>Engelsk</h1>
+    </div>
+    <div class="country">
+      <h1>Svensk</h1>
+    </div>
+  </div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+<script type="text/javascript" src="./js/dictionary.js">
+
+</script>
+
+</html>

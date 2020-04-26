@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgba(8, 105, 114, 1);
+  color: white;
+  margin-left: 2vw;
+}
