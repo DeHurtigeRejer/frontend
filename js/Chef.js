@@ -1,26 +1,73 @@
 // Get DOM Elements
 const modalOpgave = document.querySelector('#Opgavemodal');
-const modalBtn = document.querySelector('#BtnOpgave');
-const closeBtn = document.querySelector('.Opgaveclose');
+const modalBtnO = document.querySelector('#BtnOpgave');
+const closeBtnO = document.querySelector('.Opgaveclose');
 
 // Events
-modalBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
-window.addEventListener('click', outsideClick);
+modalBtnO.addEventListener('click', openModalO);
+closeBtnO.addEventListener('click', closeModalO);
+window.addEventListener('click', outsideClickO);
 
 
-function openModal() {
+function openModalO() {
 	modalOpgave.style.display = 'block';
 }
 
 // Close
-function closeModal() {
+function closeModalO() {
 	modalOpgave.style.display = 'none';
 }
 
-function outsideClick(e) {
+function outsideClickO(e) {
 	if (e.target == modalOpgave) {
 		modalOpgave.style.display = 'none';
-    //De andre modals:
+	}
+}
+// Get DOM Elements
+const modalTilføj	 = document.querySelector('#Tilføjmodal');
+const modalBtnT = document.querySelector('#BtnTilføj');
+const closeBtnT = document.querySelector('.Tilføjclose');
+// Events
+modalBtnT.addEventListener('click', openModalT);
+closeBtnT.addEventListener('click', closeModalT);
+window.addEventListener('click', outsideClickT);
+
+
+function openModalT() {
+	modalTilføj.style.display = 'block';
+}
+
+// Close
+function closeModalT() {
+	modalTilføj.style.display = 'none';
+}
+
+function outsideClickT(e) {
+	if (e.target == modalTilføj) {
+		modalTilføj.style.display = 'none';
+	}
+}
+// Get DOM Elements
+const modalStatus	 = document.querySelector('#Statusmodal');
+const modalBtnS = document.querySelector('#BtnStatus');
+const closeBtnS = document.querySelector('.Statusclose');
+// Events
+modalBtnS.addEventListener('click', openModalS);
+closeBtnS.addEventListener('click', closeModalS);
+window.addEventListener('click', outsideClickS);
+
+
+function openModalS() {
+	modalStatus.style.display = 'block';
+}
+
+// Close
+function closeModalS() {
+	modalStatus.style.display = 'none';
+}
+
+function outsideClickS(e) {
+	if (e.target == modalStatus) {
+		modalStatus.style.display = 'none';
 	}
 }
