@@ -8,3 +8,31 @@ body {
   color: white;
   margin-left: 2vw;
 }
+
+.grid {
+  position: absolute;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.content {
+  font-size: 24px;
+  background-color: #17b978;
+  color: white;
+  padding: 75px;
+  margin: 8px 0;
+  border-radius: 3vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+}
+
+.tilbagepil {
+  height: 50px;
+  width: 50px;
+}
